@@ -143,7 +143,7 @@
             <av:Size x:Key="ShapeSize">200,83.2</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Read Config Data" sap:VirtualizedContainerService.HintSize="728,6617.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Read Config Data" sap:VirtualizedContainerService.HintSize="726.4,5152" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="dtInput" />
             <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Out_name_dtInput" />
@@ -163,7 +163,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Out name " sap:VirtualizedContainerService.HintSize="665.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign DisplayName="Out name " sap:VirtualizedContainerService.HintSize="664,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
             <Assign.To>
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[Out_name_dtInput]</OutArgument>
             </Assign.To>
@@ -171,7 +171,7 @@
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(Of String, Object)]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="Index" sap:VirtualizedContainerService.HintSize="665.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+          <Assign DisplayName="Index" sap:VirtualizedContainerService.HintSize="664,81.6" sap2010:WorkflowViewState.IdRef="Assign_11">
             <Assign.To>
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[Out_index_input]</OutArgument>
             </Assign.To>
@@ -179,7 +179,7 @@
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(Of String, Object)]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="Email" sap:VirtualizedContainerService.HintSize="665.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign DisplayName="Email" sap:VirtualizedContainerService.HintSize="664,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[Out_email_dtInput]</OutArgument>
             </Assign.To>
@@ -187,9 +187,9 @@
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary (of String, Object)]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtInput]" DisplayName="Read Config Data" sap:VirtualizedContainerService.HintSize="665.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Config Data.xlsx" />
-          <ui:ReadColumn DisplayName="Read Column Workbook" sap:VirtualizedContainerService.HintSize="665.6,88" sap2010:WorkflowViewState.IdRef="ReadColumn_3" Result="[Columnindex]" SheetName="Sheet1" StartingCell="B2" WorkbookPath="Config Data.xlsx" />
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtInput]" DisplayName="Index" sap:VirtualizedContainerService.HintSize="665.6,359.2" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtInput]" DisplayName="Read Config Data" sap:VirtualizedContainerService.HintSize="664,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Config Data.xlsx" />
+          <ui:ReadColumn DisplayName="Read Column Workbook" sap:VirtualizedContainerService.HintSize="664,88" sap2010:WorkflowViewState.IdRef="ReadColumn_3" Result="[Columnindex]" SheetName="Sheet1" StartingCell="B2" WorkbookPath="Config Data.xlsx" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtInput]" DisplayName="Index" sap:VirtualizedContainerService.HintSize="664,359.2" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
@@ -213,7 +213,7 @@
               </ActivityAction>
             </ui:ForEachRow.Body>
           </ui:ForEachRow>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtInput]" DisplayName="Dictionary Name and FilePath" sap:VirtualizedContainerService.HintSize="665.6,359.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtInput]" DisplayName="Dictionary Name and FilePath" sap:VirtualizedContainerService.HintSize="664,359.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
@@ -237,7 +237,7 @@
               </ActivityAction>
             </ui:ForEachRow.Body>
           </ui:ForEachRow>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtInput]" DisplayName="Dictionary Email and FilePath" sap:VirtualizedContainerService.HintSize="665.6,359.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtInput]" DisplayName="Dictionary Email and FilePath" sap:VirtualizedContainerService.HintSize="664,359.2" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
@@ -261,29 +261,29 @@
               </ActivityAction>
             </ui:ForEachRow.Body>
           </ui:ForEachRow>
-          <ui:ReadCell Cell="B1" DisplayName="Đọc đường dẫn" sap:VirtualizedContainerService.HintSize="665.6,88" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="Config" WorkbookPath="Config Data.xlsx">
+          <ui:ReadCell Cell="B1" DisplayName="Đọc đường dẫn" sap:VirtualizedContainerService.HintSize="664,88" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="Config" WorkbookPath="Config Data.xlsx">
             <ui:ReadCell.Result>
               <OutArgument x:TypeArguments="x:String">[duongdan]</OutArgument>
             </ui:ReadCell.Result>
           </ui:ReadCell>
-          <ui:ReadColumn DisplayName="Read Sheet 1" sap:VirtualizedContainerService.HintSize="665.6,88" sap2010:WorkflowViewState.IdRef="ReadColumn_2" Result="[FilePath]" SheetName="Sheet1" StartingCell="B2" WorkbookPath="Config Data.xlsx" />
-          <ui:ReadCell Cell="B2" DisplayName="Đọc Email" sap:VirtualizedContainerService.HintSize="665.6,88" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="Config" WorkbookPath="Config Data.xlsx">
+          <ui:ReadColumn DisplayName="Read Sheet 1" sap:VirtualizedContainerService.HintSize="664,88" sap2010:WorkflowViewState.IdRef="ReadColumn_2" Result="[FilePath]" SheetName="Sheet1" StartingCell="B2" WorkbookPath="Config Data.xlsx" />
+          <ui:ReadCell Cell="B2" DisplayName="Đọc Email" sap:VirtualizedContainerService.HintSize="664,88" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="Config" WorkbookPath="Config Data.xlsx">
             <ui:ReadCell.Result>
               <OutArgument x:TypeArguments="x:String">[email]</OutArgument>
             </ui:ReadCell.Result>
           </ui:ReadCell>
-          <ui:ReadCell Cell="B3" DisplayName="Đọc Email" sap:VirtualizedContainerService.HintSize="665.6,88" sap2010:WorkflowViewState.IdRef="ReadCell_4" SheetName="Config" WorkbookPath="Config Data.xlsx">
+          <ui:ReadCell Cell="B3" DisplayName="Đọc Email" sap:VirtualizedContainerService.HintSize="664,88" sap2010:WorkflowViewState.IdRef="ReadCell_4" SheetName="Config" WorkbookPath="Config Data.xlsx">
             <ui:ReadCell.Result>
               <OutArgument x:TypeArguments="x:String">[subject]</OutArgument>
             </ui:ReadCell.Result>
           </ui:ReadCell>
-          <ui:ReadCell Cell="B4" DisplayName="Đọc mẫu mail" sap:VirtualizedContainerService.HintSize="665.6,88" sap2010:WorkflowViewState.IdRef="ReadCell_3" SheetName="Config" WorkbookPath="Config Data.xlsx">
+          <ui:ReadCell Cell="B4" DisplayName="Đọc mẫu mail" sap:VirtualizedContainerService.HintSize="664,88" sap2010:WorkflowViewState.IdRef="ReadCell_3" SheetName="Config" WorkbookPath="Config Data.xlsx">
             <ui:ReadCell.Result>
               <OutArgument x:TypeArguments="x:String">[mail]</OutArgument>
             </ui:ReadCell.Result>
           </ui:ReadCell>
-          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="665.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[duongdan]" />
-          <Assign sap:VirtualizedContainerService.HintSize="665.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_18">
+          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="664,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[duongdan]" />
+          <Assign sap:VirtualizedContainerService.HintSize="664,81.6" sap2010:WorkflowViewState.IdRef="Assign_18">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[index2]</OutArgument>
             </Assign.To>
@@ -291,7 +291,7 @@
               <InArgument x:TypeArguments="x:Int32">1</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="665.6,2329.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Columnindex]">
+          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="664,2329.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Columnindex]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -393,80 +393,6 @@
               </ActivityAction>
             </ui:ForEach.Body>
           </ui:ForEach>
-          <ui:CommentOut sap2010:Annotation.AnnotationText="bỏ" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="665.6,1425.6" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-            <ui:CommentOut.Body>
-              <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="630.4,1316" sap2010:WorkflowViewState.IdRef="Sequence_35">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="587.2,1226.4" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[FilePath]">
-                  <ui:ForEach.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="index" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="553.6,1038.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="x:String" Name="row" />
-                          <Variable x:TypeArguments="x:Boolean" Name="Exists" />
-                        </Sequence.Variables>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
-                          <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[row]</OutArgument>
-                          </Assign.To>
-                          <Assign.Value>
-                            <InArgument x:TypeArguments="x:String">[Path.GetFileName(index.ToString).ToString]</InArgument>
-                          </Assign.Value>
-                        </Assign>
-                        <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[Exists]" sap:VirtualizedContainerService.HintSize="510.4,116" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[duongdan.ToString +row.ToString]" PathType="Folder" />
-                        <If Condition="[Exists = False]" sap:VirtualizedContainerService.HintSize="510.4,671.2" sap2010:WorkflowViewState.IdRef="If_2">
-                          <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="476.8,488" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Int32">[stt]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Int32">[stt+1]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[row.ToString + &quot; không tồn tại&quot;]" />
-                              <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="[email.ToString]" Body="[mail.ToString]" ContinueOnError="True" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="433.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[subject.ToString]" To="[Out_email_dtInput(row.ToString).ToString]">
-                                <ui:SendOutlookMail.Files>
-                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                                </ui:SendOutlookMail.Files>
-                              </ui:SendOutlookMail>
-                            </Sequence>
-                          </If.Then>
-                          <If.Else>
-                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12" />
-                          </If.Else>
-                        </If>
-                      </Sequence>
-                    </ActivityAction>
-                  </ui:ForEach.Body>
-                </ui:ForEach>
-              </Sequence>
-            </ui:CommentOut.Body>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:CommentOut>
         </Sequence>
       </FlowStep>
     </Flowchart>
