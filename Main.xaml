@@ -143,7 +143,7 @@
             <av:Size x:Key="ShapeSize">200,83.2</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Read Config Data" sap:VirtualizedContainerService.HintSize="728,6879.200000000001" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Read Config Data" sap:VirtualizedContainerService.HintSize="728,6586.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="dtInput" />
             <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Out_name_dtInput" />
@@ -213,7 +213,6 @@
               </ActivityAction>
             </ui:ForEachRow.Body>
           </ui:ForEachRow>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="665.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[Out_index_input(&quot;001&quot;).ToString]" />
           <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtInput]" DisplayName="Dictionary Name and FilePath" sap:VirtualizedContainerService.HintSize="665.6,359.2" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
@@ -292,13 +291,13 @@
               <InArgument x:TypeArguments="x:Int32">1</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="665.6,2496.8" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Columnindex]">
+          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="665.6,2329.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Columnindex]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="630.4,2308.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="630.4,2141.6" sap2010:WorkflowViewState.IdRef="Sequence_28">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -312,7 +311,7 @@
                       <InArgument x:TypeArguments="x:Int32">0</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ForEachFolderX DisplayName="For Each Folder in Folder" Folder="[duongdan.ToString]" sap:VirtualizedContainerService.HintSize="587.2,708" sap2010:WorkflowViewState.IdRef="ForEachFolderX_3" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="False">
+                  <ui:ForEachFolderX DisplayName="For Each Folder in Folder" Folder="[duongdan.ToString]" sap:VirtualizedContainerService.HintSize="587.2,708.8" sap2010:WorkflowViewState.IdRef="ForEachFolderX_3" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="False">
                     <ui:ForEachFolderX.Body>
                       <ActivityAction x:TypeArguments="si:DirectoryInfo, x:Int32">
                         <ActivityAction.Argument1>
@@ -353,25 +352,15 @@
                       </ActivityAction>
                     </ui:ForEachFolderX.Body>
                   </ui:ForEachFolderX>
-                  <If Condition="[index1= 1]" sap:VirtualizedContainerService.HintSize="587.2,1349.6" sap2010:WorkflowViewState.IdRef="If_6">
+                  <If Condition="[index1= 0]" sap:VirtualizedContainerService.HintSize="587.2,1181.6" sap2010:WorkflowViewState.IdRef="If_6">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="377.6,180" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                      <Sequence sap:VirtualizedContainerService.HintSize="476.8,818.4" sap2010:WorkflowViewState.IdRef="Sequence_32">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[currentItem.ToString + &quot; tồn tại&quot;]" />
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="478.4,986.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="435.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_19">
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_19">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[index2]</OutArgument>
                           </Assign.To>
@@ -379,25 +368,24 @@
                             <InArgument x:TypeArguments="x:Int32">[index2+1]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="435.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[currentItem.ToString + &quot; không tồn tại&quot;]" />
-                        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="435.2,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="EXCEL" />
-                        <ui:WriteCell Cell="[&quot;A&quot;+index2.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="435.2,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sheet1" Text="[Out_index_input(currentItem.ToString).ToString]" WorkbookPath="Check.xlsx" />
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,314.4" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-                          <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376.8,236" sap2010:WorkflowViewState.IdRef="Sequence_34">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="[email.ToString]" Body="[mail.ToString]" ContinueOnError="True" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[subject.ToString]" To="[Out_index_input(currentItem.ToString).ToString]">
-                                <ui:SendOutlookMail.Files>
-                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                                </ui:SendOutlookMail.Files>
-                              </ui:SendOutlookMail>
-                            </Sequence>
-                          </ui:CommentOut.Body>
-                        </ui:CommentOut>
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[currentItem.ToString + &quot; không tồn tại&quot;]" />
+                        <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="EXCEL" />
+                        <ui:WriteCell Cell="[&quot;A&quot;+index2.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Sheet1" Text="[Out_index_input(currentItem.ToString).ToString]" WorkbookPath="Check.xlsx" />
+                        <ui:SendOutlookMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Account="[email.ToString]" Body="[mail.ToString]" ContinueOnError="True" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="433.6,146.4" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="[subject.ToString]" To="[Out_index_input(currentItem.ToString).ToString]">
+                          <ui:SendOutlookMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendOutlookMail.Files>
+                        </ui:SendOutlookMail>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="377.6,180" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[currentItem.ToString + &quot; tồn tại&quot;]" />
                       </Sequence>
                     </If.Else>
                   </If>
