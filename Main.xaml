@@ -143,7 +143,7 @@
             <av:Size x:Key="ShapeSize">200,83.2</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Read Config Data" sap:VirtualizedContainerService.HintSize="728,6586.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Read Config Data" sap:VirtualizedContainerService.HintSize="728,6617.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="sd:DataTable" Name="dtInput" />
             <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Out_name_dtInput" />
@@ -393,15 +393,16 @@
               </ActivityAction>
             </ui:ForEach.Body>
           </ui:ForEach>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="665.6,1394.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+          <ui:CommentOut sap2010:Annotation.AnnotationText="bỏ" DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="665.6,1425.6" sap2010:WorkflowViewState.IdRef="CommentOut_5">
             <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="630.4,1316" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="630.4,1316" sap2010:WorkflowViewState.IdRef="Sequence_35">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="587.2,1226.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[FilePath]">
+                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="587.2,1226.4" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[FilePath]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -460,6 +461,11 @@
                 </ui:ForEach>
               </Sequence>
             </ui:CommentOut.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
         </Sequence>
       </FlowStep>
